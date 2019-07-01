@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace WebAppForInit
+namespace WebAppForConsul
 {
     public class Program
     {
@@ -29,6 +29,5 @@ namespace WebAppForInit
                 .UseStartup<Startup>()
                 .UseUrls($"http://{ip}:{port}");
         }
-            
     }
 }
