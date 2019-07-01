@@ -2,6 +2,7 @@
 
 namespace WebAppForConsul.Controllers
 {
+    [Produces("application/json")]
     [Route("api/Health")]
     public class HealthController:Controller
     {

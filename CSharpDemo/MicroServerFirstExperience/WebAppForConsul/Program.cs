@@ -20,14 +20,11 @@ namespace WebAppForConsul
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
             //从控制台启动行读取ip和端口启动参数
-            var config = new ConfigurationBuilder().AddCommandLine(args).Build();
-
-            var ip = config["ip"];
-            var port = config["port"];
+            //var config = new ConfigurationBuilder().AddCommandLine(args).Build();
 
             return WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseUrls($"http://{ip}:{port}");
+                .UseUrls($"http://127.0.0.1:5001");
         }
     }
 }
