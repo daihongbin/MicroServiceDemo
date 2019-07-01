@@ -1,9 +1,12 @@
-
 my:
-  name: forezp
-  age: 12
+  name: dhb
+  age: 21
   number: ${random.int}
   uuid: ${random.uuid}
   max: ${random.int(10)}
   value: ${random.value}
   greeting: hi,i'm ${my.name}
+
+spring:
+  profiles:
+    active: dev # 启用哪个配置文件
