@@ -37,9 +37,6 @@ namespace WebAppForConsul
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            app.UseMvc();
-
             //注册Consul服务
             var serviceEntity = new ServiceEntity
             {
@@ -49,8 +46,10 @@ namespace WebAppForConsul
                 ConsulIP = Configuration["Consul:IP"],
                 ConsulPort = Convert.ToInt32(Configuration["Consul:Port"])
             };
-            app.RegisterConsul(lifetime,serviceEntity);
+            app.RegisterConsul(lifetime, serviceEntity);
 
+            app.UseHttpsRedirection();
+            app.UseMvc();
         }
     }
 }
