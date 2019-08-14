@@ -27,6 +27,7 @@ import java.io.IOException;
 @SpringBootApplication
 public class SpringBeetlsqlApplication {
 
+
     public static void main(String[] args) {
         SpringApplication.run(SpringBeetlsqlApplication.class, args);
     }
@@ -76,7 +77,8 @@ public class SpringBeetlsqlApplication {
         factory.setCs(source);
         factory.setDbStyle(new MySqlStyle());
         factory.setInterceptors(new Interceptor[]{new DebugInterceptor()});
-        factory.setNc(new UnderlinedNameConversion()); //开启驼峰
+        //开启驼峰
+        factory.setNc(new UnderlinedNameConversion());
         factory.setSqlLoader(new ClasspathLoader("/sql"));
         return factory;
     }
