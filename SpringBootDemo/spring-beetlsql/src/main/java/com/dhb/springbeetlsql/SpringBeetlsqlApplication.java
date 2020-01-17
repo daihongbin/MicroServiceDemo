@@ -86,7 +86,7 @@ public class SpringBeetlsqlApplication {
     //配置数据库
     @Bean(name = "dataSource")
     public DataSource getDataSource(){
-        return DataSourceBuilder.create().url("jdbc:mysql://127.0.0.1:3306/test").username("root").password("root").build();
+        return DataSourceBuilder.create().url("jdbc:mysql://127.0.0.1:3306/test").username("root").password("123456").build();
     }
 
     //开事务
